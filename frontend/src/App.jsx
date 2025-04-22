@@ -13,7 +13,7 @@ function App() {
     }
     try {
       const res = await axios.get(`https://weather-api-backend-jiki.onrender.com/api/weather/${city}`);
-
+        console.log("res-frontend",res)
       if (res.status === 200) {
         setWeather(res.data.requiredData);
         setErrorCity("");
