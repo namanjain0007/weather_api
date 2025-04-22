@@ -12,7 +12,7 @@ function App() {
       return setErrorCity("Please Enter a City!");
     }
     try {
-      const res = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      const res = await axios.get(`https://weather-vcou.onrender.com/api/weather/${city}`);
 
       if (res.status === 200) {
         setWeather(res.data.requiredData);
