@@ -12,7 +12,7 @@ app.use(express.json());
 // app.use(cors());
 app.use(
   cors({
-    origin: "https://weather-vcou.onrender.com/", 
+    origin: "https://weather-epuf.onrender.com", 
   })
 );
 
