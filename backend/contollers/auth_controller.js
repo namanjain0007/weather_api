@@ -1,4 +1,4 @@
-const weatherData = require("../Models/Weather_schema");
+// const weatherData = require("../Models/Weather_schema");
 
 const fetchWeatherData = async (req, res) => {
   const { city } = req.params;
@@ -18,9 +18,9 @@ const fetchWeatherData = async (req, res) => {
         temperature: data.main.temp,
         description: data.weather[0].description,
       };
-      console.log("start")
-      await weatherData.create(requiredData);
-console.log("end")
+//       console.log("start")
+//       await weatherData.create(requiredData);
+// console.log("end")
       res.status(200).json({ requiredData });
     } else {
       res.status(404).json({ msg: "City not found" });
