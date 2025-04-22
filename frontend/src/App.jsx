@@ -6,6 +6,9 @@ function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [errorCity, setErrorCity] = useState("");
+    const kelvinToCelsius = (kelvin) => {
+    return (kelvin - 273.15).toFixed(2);
+  };
 
   const fetchWeather = async () => {
     if (!city.trim()) {
@@ -37,7 +40,7 @@ function App() {
       {weather && !errorCity ? (
         <div>
           <h2>🌤️ Weather in {weather.city}</h2>
-          <p>🌡️ Temperature: {weather.temperature}°C</p>
+          <p>🌡️ Temperature:{kelvinToCelsius(weather.temperature)}°C</p>
           <p>📝 Condition: {weather.description}</p>
         </div>
       ) : (
