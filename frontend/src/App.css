@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.App h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px 15px;
+  width: 80%;
+  border: 2px solid #74ebd5;
+  border-radius: 10px;
+
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #4b79a1;
+  box-shadow: 0 0 5px rgba(75, 121, 161, 0.5);
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4b79a1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #355c7d;
+}
+
+.no-city-found-div h6 {
+  margin-top: 15px;
+  color: red;
+  font-weight: 500;
+}
+
+.App h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #222;
+}
+
+.App p {
+  margin: 5px;
+  font-size: 18px;
+  color: #555;
+}
