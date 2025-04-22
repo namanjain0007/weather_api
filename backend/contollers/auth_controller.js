@@ -11,13 +11,14 @@ const fetchWeatherData = async (req, res) => {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     );
     const data = await response.json();
-
+  console.log("response nj",response)
     if (response.status === 200) {
       const requiredData = {
         city: data.name,
         temperature: data.main.temp,
         description: data.weather[0].description,
       };
+      console.log("requiredData",requiredData)
 
       await weatherData.create(requiredData);
 
