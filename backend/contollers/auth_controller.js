@@ -5,6 +5,8 @@ const fetchWeatherData = async (req, res) => {
   const apiKey = process.env.WEATHER_API_KEY;
 
   try {
+        console.log("Requested City:", city);
+
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     );
