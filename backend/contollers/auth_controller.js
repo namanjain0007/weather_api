@@ -27,6 +27,7 @@ const fetchWeatherData = async (req, res) => {
       res.status(404).json({ msg: "City not found" });
     }
   } catch (error) {
+    console.log("error section here",error)
     res.status(500).json({ msg: "error data fetching" });
   }
 };
